@@ -1,0 +1,16 @@
+while True:
+    try:
+        nCompetidores = int(input()) 
+        largada = [int(i) for i in input().split()]
+        chegada = [int(j) for j in input().split()]
+        output = 0
+
+        while largada != chegada:
+            i = largada[0]
+            output += chegada.index(i)
+            largada.remove(i)
+            chegada.remove(i)
+
+        print(output)
+    except EOFError:
+        break
